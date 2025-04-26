@@ -256,7 +256,7 @@ const initApp = (MenuRoutes, i18nMessages) => {
   });
   app.use(i18n);
 
-  const vm = app.mount('#hello-vue');
+  const vm = app.mount('#app');
 }
 const loadMenuRoutes = async () => {
   let res = await axios.get('/MenuRoutes.json');
