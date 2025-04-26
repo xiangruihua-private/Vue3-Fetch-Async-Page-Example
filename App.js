@@ -193,12 +193,12 @@ const initApp = (MenuRoutes, i18nMessages) => {
         {
           title: 'Home',
           disabled: false,
-          href: '/#/',
+          href: '/',
         },
         {
           title: router.currentRoute.value.meta.menu,
           disabled: true,
-          href: '/#' + router.currentRoute.value.path,
+          href: router.currentRoute.value.path,
         },
       ]);
       const back = () => {
