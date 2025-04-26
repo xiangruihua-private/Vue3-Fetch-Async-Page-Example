@@ -262,7 +262,7 @@ const loadMenuRoutes = async () => {
   let res = await axios.get('MenuRoutes.json');
   return res.data;
 }
-const fetchLocale = async (locale) => await import(`locale/${locale}.js`);
+const fetchLocale = async (locale) => await import(`./locale/${locale}.js`);
 Promise.all([ loadMenuRoutes(), fetchLocale('zh_CN'), fetchLocale('en_US') ])
   .then(([ MenuRoutes, zhMsg, enMsg ]) => {
     initApp(MenuRoutes, { zh_CN: zhMsg.default, en_US: enMsg.default });
