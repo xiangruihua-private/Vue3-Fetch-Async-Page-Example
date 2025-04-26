@@ -137,7 +137,7 @@ const initApp = (MenuRoutes, i18nMessages) => {
     template:
       `<v-locale-provider :locale="locale">
         <v-app :theme="theme">
-          <v-app-bar color="teal-darken-4" image="./assets/jpg/1080.jpg">
+          <v-app-bar color="teal-darken-4" image="assets/jpg/1080.jpg">
             <template v-slot:image>
               <v-img
                 gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
@@ -259,10 +259,10 @@ const initApp = (MenuRoutes, i18nMessages) => {
   const vm = app.mount('#app');
 }
 const loadMenuRoutes = async () => {
-  let res = await axios.get('/MenuRoutes.json');
+  let res = await axios.get('MenuRoutes.json');
   return res.data;
 }
-const fetchLocale = async (locale) => await import(`./locale/${locale}.js`);
+const fetchLocale = async (locale) => await import(`locale/${locale}.js`);
 Promise.all([ loadMenuRoutes(), fetchLocale('zh_CN'), fetchLocale('en_US') ])
   .then(([ MenuRoutes, zhMsg, enMsg ]) => {
     initApp(MenuRoutes, { zh_CN: zhMsg.default, en_US: enMsg.default });
