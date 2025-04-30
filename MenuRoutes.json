@@ -2,8 +2,8 @@
     {"menu":"Go to Home","path": "/", "name": "home","displayName":"Home","fetchPath": "./HomePage.js"},
     {"menu":"Go to About","path": "/about/:id", "name": "about","params":{"id":123},"fetchPath": "./AboutPage.js"},
     {"menu":"Go to VHover","path": "/vhover", "name": "vhover","query":{"id":123}, "fetchPath": "./VHoverPage.js"},
-    {"menu":"Go to ReversedMessage","path": "/reversedMessage", "name": "reversedMessage", "fetchPath": "./ReversedMessagePage.js"},
+    {"menu":"Go to VTable","path": "/VTable", "name": "VTable", "fetchPath": "./VTablePage.js"},
     {"menu":"Go to ButtonCounter","path": "/buttonCounter", "name": "buttonCounter", "fetchPath": "./ButtonCounterPage.js"},
-    {"menu":"Go to ElButton","path": "/elButton", "name": "elButton", "fetchPath": "./ElButtonPage.js"},
+    {"menu":"Go to VBtn","path": "/VBtn", "name": "VBtn", "fetchPath": "./VBtnPage.js"},
     {"menu":"Go to Echarts","path": "/echarts", "name": "echarts", "fetchPath": "./EchartsPage.js"}
 ]

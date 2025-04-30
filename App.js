@@ -181,7 +181,9 @@ const initApp = (MenuRoutes, i18nMessages) => {
           </v-navigation-drawer>
 
           <v-main class="position-relative">
-            <router-view></router-view>
+            <router-view v-slot="{ Component }">
+              <component :is="Component" />
+            </router-view>
           </v-main>
         </v-app>
       </v-locale-provider>`,
